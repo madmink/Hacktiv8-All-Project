@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='assets/favicon.ico') }}" type="image/gif" sizes="16x16">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" >
+    <title>Milestone1 P1 | Model Deployment</title>
+</head>
+<body>
+
+
+    <header>
+        <nav class="navbar navbar-dark bg-dark navbar-collapse navbar-expand-md">
+            <div class="container-md" style="height: 3.5rem; padding-right: 2vw; padding-left: 2vw; ">
+              <a class="navbar-brand" href="#">IBM Attrition Analysist</a>
+            </p>
+            </div>
+        </nav>
+      
+    </header>
+
+<main>
+        <div class="container-md" style="height: 100vh;min-height: 1500px;">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="mb-5 text-center">Attrition Prediction</h1>
+
+                <form action="{{ url_for('predict') }}" method ="post" class="row g-3 needs-validation" novalidate>
+
+                    <label for="client-data" class="form-label"><h4>Basic Information</h4></label>
+                    <div class="input-group mb-3 has-validation" id="client-data">
+                        <span class="input-group-text">Age</span>
+                        <input type="number" min=18 class="form-control" placeholder="Client's Age" aria-label="age" id="age" name="age" required>
+
+
+                        <span class="input-group-text">Gender</span>
+                        <select class="form-select form-control" aria-label="gender" id="gender" name="gender" required>
+                            <option class ="form-control" selected disabled value="">...</option>
+                            <option class ="form-control" value="1">Male</option>
+                            <option class ="form-control" value="2">Female</option>
+                        </select>
+
+
+                        <span class="input-group-text">Marital Status</span>
+                        <select class="form-select form-control" aria-label="marital-status" id="marital-status" name="marital-status" required>
+                            <option class ="form-control" selected disabled value="">Marital Status </option>
+                            <option class ="form-control" value="1">Divorced</option>
+                            <option class ="form-control" value="2">Married</option>
+                            <option class ="form-control" value="3">Single</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group mb-3 has-validation">
+                        <span class="input-group-text" id="basic-addon1">Education</span>
+                        <select class="form-select form-control" aria-label="education" id="education" name="education" required>
+                            <option class ="form-control" selected disabled value="">Education</option>
+                            <option class ="form-control" value="1">1</option>
+                            <option class ="form-control" value="2">2</option>
+                            <option class ="form-control" value="3">3</option>
+                            <option class ="form-control" value="4">4</option>
+                            <option class ="form-control" value="5">5</option>
+                        </select>
+
+      
+                        <span class="input-group-text" id="basic-addon1">Education Field</span>
+                        <select class="form-select form-control" aria-label="education-field" id="education-field" name="education-field" required>
+                            <option class ="form-control" selected disabled value="">Education</option>
+                            <option class ="form-control" value="1">Human Resources</option>
+                            <option class ="form-control" value="2">Life Sciences</option>
+                            <option class ="form-control" value="3">Marketing</option>
+                            <option class ="form-control" value="4">Medical</option>
+                            <option class ="form-control" value="5">Other</option>
+                            <option class ="form-control" value="6">Technical Degree</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group mb-3 has-validation">
+                        <span class="input-group-text" id="basic-addon1">Department</span>
+                        <select class="form-select form-control" aria-label="department" id="department" name="department" required>
+                            <option class ="form-control" selected disabled value="">Department</option>
+                            <option class ="form-control" value="1">Human Resources</option>
+                            <option class ="form-control" value="2">Research and Development</option>
+                            <option class ="form-control" value="3">Sales</option>
+                        </select>
+
+                        <span class="input-group-text" id="basic-addon1">Job Role</span>
+                        <select class="form-select form-control" aria-label="job-role" id="job-role" name="job-role" required>
+                            <option class ="form-control" selected disabled value="">Job Role</option>
+                            <option class ="form-control" value="1">Research Scientist</option>
+                            <option class ="form-control" value="2">Sales Representative</option>
+                            <option class ="form-control" value="3">Laboratory Technician</option>
+                            <option class ="form-control" value="4">Manufacturing Director</option>
+                            <option class ="form-control" value="5">Research Director</option>
+                            <option class ="form-control" value="6">Healthcare Representative</option>
+                            <option class ="form-control" value="7">Human Resources</option>
+                        </select>
+                    </div>
+                    
+
+                    <label for="client-data" class="form-label mt-3"><h4>Additional Information</h4></label>
+                    <div class="input-group mb-3 has-validation">
+                      <span class="input-group-text">Distance from home</span>
+                      <input type="number" min=0 class="form-control" placeholder="distance-from-home" aria-label="distance-from-home" id="distance-from-home" name="distance-from-home" required>
+
+                      <span class="input-group-text" id="basic-addon1">Business Travel</span>
+                      <select class="form-select form-control" aria-label="business-travel" id="business-travel" name="business-travel" required>
+                          <option class ="form-control" selected disabled value="">Business Travel</option>
+                          <option class ="form-control" value="1">Travel_Frequently</option>
+                          <option class ="form-control" value="2">Travel_Rarely</option>
+                          <option class ="form-control" value="3">Non_Travel</option>
+                      </select>
+                    </div>
+
+                    <div class="input-group mb-3 has-validation">
+                        <span class="input-group-text" id="basic-addon1">Job Level</span>
+                        <select class="form-select form-control" aria-label="job-level" id="job-level" name="job-level" required>
+                            <option class ="form-control" selected disabled value="">Range Job Level</option>
+                            <option class ="form-control" value="1">1</option>
+                            <option class ="form-control" value="2">2</option>
+                            <option class ="form-control" value="3">3</option>
+                            <option class ="form-control" value="4">4</option>
+                            <option class ="form-control" value="5">5</option>
+                        </select>
+                    </div>
+                       
+                    <div class="input-group mb-3 has-validation">
+                        <span class="input-group-text" id="basic-addon1">Job Involvement</span>
+                        <select class="form-select form-control" aria-label="job-involvement" id="job-involvement" name="job-involvement" required>
+                            <option class ="form-control" selected disabled value="">Range Job Involvement</option>
+                            <option class ="form-control" value="1">1</option>
+                            <option class ="form-control" value="2">2</option>
+                            <option class ="form-control" value="3">3</option>
+                            <option class ="form-control" value="4">4</option>
+                        </select>  
+                    </div>
+
+                    <label for="client-data" class="form-label mt-3"><h4>Personal Benefit Information</h4></label>
+
+                    <div class="input-group mb-3 has-validation">
+                        <span class="input-group-text" id="basic-addon1">Percent Salary Hike</span>
+                        <input type="number" min=0 class="form-control" placeholder="in Percent" aria-label="percent-salary-hike" id="percent-salary-hike" name="percent-salary-hike" required>
+                    </div>
+
+                    <div class="input-group mb-3 has-validation">
+                        <span class="input-group-text">Hourly Rate</span>
+                        <input type="number" min=0 class="form-control" placeholder="hourly-rate" aria-label="hourly-rate" id="hourly-rate" name="hourly-rate" required>
+
+                        <span class="input-group-text">Daily Rate</span>
+                        <input type="number" min=0 class="form-control" placeholder="daily-Rate" aria-label="daily-rate" id="daily-rate" name="daily-rate" required>
+
+                        <span class="input-group-text">Monthly Rate</span>
+                        <input type="number" min=0 class="form-control" placeholder="monthly-Rate" aria-label="monthly-rate" id="monthly-rate" name="monthly-rate" required>
+
+                    </div>
+                    <div class="input-group mb-3 has-validation">
+                        <span class="input-group-text">Monthly Income</span>
+                        <input type="number" min=0 class="form-control" placeholder="Monthly Income" aria-label="monthly-income" id="monthly-income" name="monthly-income" required>
+                        
+                        <span class="input-group-text" id="basic-addon1">Stock Option</span>
+                        <select class="form-select form-control" aria-label="stock-option" id="stock-option" name="stock-option" required>
+                            <option class ="form-control" selected disabled value="">Stock Option Level</option>
+                            <option class ="form-control" value="0">0</option>
+                            <option class ="form-control" value="1">1</option>
+                            <option class ="form-control" value="2">2</option>
+                            <option class ="form-control" value="3">3</option>
+                        </select>  
+                    </div>
+
+                    <label for="client-data" class="form-label mt-3"><h4>Experience Related Information</h4></label>
+                    <div class="input-group mb-3 has-validation">
+                        <span class="input-group-text" id="basic-addon1">Number of Companies work</span>
+                        <input type="number" min=0 class="form-control" placeholder="in Years" aria-label="number-of-companieswork" id="number-of-companieswork" name="number-of-companieswork" required>
+                    
+                        <span class="input-group-text">Performance Rating</span>
+                        <select class="form-select form-control" aria-label="performance-rating" id="performance-rating" name="performance-rating" required>
+                          <option class ="form-control" selected disabled value="">...</option>
+                          <option class ="form-control" value="3">3</option>
+                          <option class ="form-control" value="4">4</option>
+                        </select>
+                   
+                        <span class="input-group-text" id="basic-addon1">Total Working Time</span>
+                        <input type="number" min=0 class="form-control" placeholder="in Years" aria-label="total-working-years" id="total-working-years" name="total-working-years" required>
+                    </div>
+                    <div class="input-group mb-3 has-validation">
+                        <span class="input-group-text" id="basic-addon1">Total Time in Company</span>
+                        <input type="number" min=0 class="form-control" placeholder="in Years" aria-label="years-at-company" id="years-at-company" name="years-at-company" required>                        
+                    
+                        <span class="input-group-text" id="basic-addon1">Total Time in Current Role</span>
+                        <input type="number" min=0 class="form-control" placeholder="in Years" aria-label="years-in-currentrole" id="years-in-currentrole" name="years-in-currentrole" required>
+                    </div>
+
+                    <label for="client-data" class="form-label mt-3"><h4>Satisfaction Information</h4></label>
+                    <div class="input-group mb-3 has-validation">
+                      <span class="input-group-text">Job Satisfaction</span>
+                      <select class="form-select form-control" aria-label="job-satisfaction" id="job-satisfaction" name="job-satisfaction" required>
+                        <option class ="form-control" selected disabled value="">...</option>
+                        <option class ="form-control" value="1">1</option>
+                        <option class ="form-control" value="2">2</option>
+                        <option class ="form-control" value="3">3</option>
+                        <option class ="form-control" value="4">4</option>
+                    </select>
+
+                    <span class="input-group-text">Environmental Satisfaction</span>
+                      <select class="form-select form-control" aria-label="environmental-satisfaction" id="environmental-satisfaction" name="environmental-satisfaction" required>
+                        <option class ="form-control" selected disabled value="">...</option>
+                        <option class ="form-control" value="1">1</option>
+                        <option class ="form-control" value="2">2</option>
+                        <option class ="form-control" value="3">3</option>
+                        <option class ="form-control" value="4">4</option>
+                    </select>
+
+                    <span class="input-group-text">Relationship Satisfaction</span>
+                    <select class="form-select form-control" aria-label="relationship-satisfaction" id="relationship-satisfaction" name="relationship-satisfaction" required>
+                      <option class ="form-control" selected disabled value="">...</option>
+                      <option class ="form-control" value="1">1</option>
+                      <option class ="form-control" value="2">2</option>
+                      <option class ="form-control" value="3">3</option>
+                      <option class ="form-control" value="4">4</option>
+                  </select>
+                    </div>
+
+                    <div class="input-group mb-3 has-validation">
+                        <span class="input-group-text">OverTime</span>
+                        <select class="form-select form-control" aria-label="overtime" id="overtime" name="overtime" required>
+                          <option class ="form-control" selected disabled value="">...</option>
+                          <option class ="form-control" value="0">Yes</option>
+                          <option class ="form-control" value="1">No</option>
+                       </select>
+
+                       <span class="input-group-text">Work Life Balance</span>
+                        <select class="form-select form-control" aria-label="work-life-balance" id="work-life-balance" name="work-life-balance" required>
+                            <option class ="form-control" selected disabled value="">...</option>
+                            <option class ="form-control" value="1">1</option>
+                            <option class ="form-control" value="2">2</option>
+                            <option class ="form-control" value="3">3</option>
+                            <option class ="form-control" value="4">4</option>
+                        </select>
+                    </div>
+
+                    <label for="client-data" class="form-label mt-3"><h4>Miscellanous</h4></label>
+                    <div class="input-group mb-3 has-validation">
+                    <span class="input-group-text" id="basic-addon1">Training time Last Year</span>
+                        <input type="number" min=0 class="form-control" placeholder="..." aria-label="training-times-lastyear" id="training-times-lastyear" name="training-times-lastyear" required>
+
+                    <span class="input-group-text" id="basic-addon1">Time since Last Promotion</span>
+                        <input type="number" min=0 class="form-control" placeholder="in Years" aria-label="years-since-lastpromotion" id="years-since-lastpromotion" name="years-since-lastpromotion" required>
+                    
+                    <span class="input-group-text" id="basic-addon1">Years With Current Manager</span>
+                        <input type="number" min=0 class="form-control" placeholder="in Years" aria-label="years-with-currentmanager" id="years-with-currentmanager" name="years-with-currentmanager" required>
+    
+                    </div>
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button type="submit" class="btn btn-primary btn-lg" id="liveAlertBtn">Predict</button>
+                     </div>
+
+                </form>
+            </div>
+        </div>
+      </div>
+</main>
+
+<footer class="text-muted py-5 bg-light" style="bottom : 0;">
+    <div class ="container-md" style="padding-right: 2vw; padding-left: 2vw;">
+        <p class="float-end mb-1">
+            <a href="#" class="text-decoration-none">Back to top</a>
+            <p class="mb-0">Deployment Site originally made by <a href="https://www.linkedin.com/in/fadilah-nur-imani/" class="text-decoration-none">Fadilah Nur Imani</a>.</p>
+            <p class="mb-0">modified and used by Arry Pandowo for milestone showcase only</p>
+          
+  
+      </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+      'use strict'
+  
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.querySelectorAll('.needs-validation')
+  
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+  
+            form.classList.add('was-validated')
+          }, false)
+        })
+})()
+</script>
+</body>
+</html>
+  

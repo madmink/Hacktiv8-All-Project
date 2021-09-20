@@ -1,0 +1,6 @@
+Education,Gender,JobLevel,StockOptionLevel,BusinessTravel_Non-Travel,BusinessTravel_Travel_Frequently,BusinessTravel_Travel_Rarely,Department_Human Resources,Department_Research & Development,Department_Sales,EducationField_Human Resources,EducationField_Life Sciences,EducationField_Marketing,EducationField_Medical,EducationField_Other,EducationField_Technical Degree,JobRole_Healthcare Representative,JobRole_Human Resources,JobRole_Laboratory Technician,JobRole_Manager,JobRole_Manufacturing Director,JobRole_Research Director,JobRole_Research Scientist,JobRole_Sales Executive,JobRole_Sales Representative,MaritalStatus_Divorced,MaritalStatus_Married,MaritalStatus_Single,num1,num2,num3,num4
+3,0,3,0,0,0,1,0,1,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,-0.8120394921748189,-0.7952868170289703,0.8256387315475995,-0.40503186261201113
+3,0,2,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,-0.8266859269496014,0.6417377416436126,-1.0218087725051783,0.5278806134363278
+4,0,1,3,0,1,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,-1.2865849416721074,0.03768858521585586,0.2612117805649837,-1.0311260505107163
+3,0,1,0,0,1,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,-1.5986821302576357,-1.2074986905641276,1.5788606434612757,1.0190947173691205
+1,0,1,0,0,0,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,1.3799934557523352,-1.0397754365302192,1.2289695843894335,-0.7367960258707228

@@ -1,0 +1,11 @@
+gender;SeniorCitizen;Partner;Dependents;tenure;PaperlessBilling;MonthlyCharges;TotalCharges;Churn;MultipleLines_No phone service;MultipleLines_Yes;InternetService_DSL;InternetService_No;OnlineSecurity_No internet service;OnlineSecurity_Yes;OnlineBackup_No internet service;OnlineBackup_Yes;DeviceProtection_No internet service;DeviceProtection_Yes;TechSupport_No internet service;TechSupport_Yes;StreamingTV_No internet service;StreamingTV_Yes;StreamingMovies_No internet service;StreamingMovies_Yes;Contract_Month-to-month;Contract_One year;Contract_Two year;PaymentMethod_Bank transfer (automatic);PaymentMethod_Credit card (automatic);PaymentMethod_Electronic check;PaymentMethod_Mailed check
+0;0;1;0;1;1;29.85;29.85;0;1;0;1;0;0;0;0;1;0;0;0;0;0;0;0;0;1;0;0;0;0;1;0
+1;0;0;0;34;0;56.95;1889.5;0;0;0;1;0;0;1;0;0;0;1;0;0;0;0;0;0;0;1;0;0;0;0;1
+1;0;0;0;2;1;53.85;108.15;1;0;0;1;0;0;1;0;1;0;0;0;0;0;0;0;0;1;0;0;0;0;0;1
+1;0;0;0;45;0;42.3;1840.75;0;1;0;1;0;0;1;0;0;0;1;0;1;0;0;0;0;0;1;0;1;0;0;0
+0;0;0;0;2;1;70.7;151.65;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;1;0
+0;0;0;0;8;1;99.65;820.5;1;0;1;0;0;0;0;0;0;0;1;0;0;0;1;0;1;1;0;0;0;0;1;0
+1;0;0;1;22;1;89.1;1949.4;0;0;1;0;0;0;0;0;1;0;0;0;0;0;1;0;0;1;0;0;0;1;0;0
+0;0;0;0;10;0;29.75;301.9;0;1;0;1;0;0;1;0;0;0;0;0;0;0;0;0;0;1;0;0;0;0;0;1
+0;0;1;0;28;1;104.8;3046.05;1;0;1;0;0;0;0;0;0;0;1;0;1;0;1;0;1;1;0;0;0;0;1;0
+1;0;0;1;62;0;56.15;3487.95;0;0;0;1;0;0;1;0;1;0;0;0;0;0;0;0;0;0;1;0;1;0;0;0
