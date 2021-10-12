@@ -1,12 +1,6 @@
-# Graded Challenge 1
-
-_Graded Challenge ini dibuat guna mengevaluasi pembelajaran pada Hacktiv8 Data Science Fulltime Program khususnya pada konsep Basic Python, Numpy, serta Data Preparation with Pandas._
-
----
-
 ## Dataset Description
 
-Unduh dataset yang akan digunakan [disini](https://www.kaggle.com/abcsds/pokemon).
+Sumber dataset yang akan digunakan [disini](https://www.kaggle.com/abcsds/pokemon).
 
 This data set includes 721 Pokemon, including their number, name, first and second type, and basic stats: HP, Attack, Defense, Special Attack, Special Defense, and Speed.
 
@@ -24,35 +18,7 @@ The feature of this data is:
 - SP Def: the base damage resistance against special attacks
 - Speed: determines which pokemon attacks first each round
 
-## Assignment Instructions
-
-*Graded Challenge 1* dikerjakan dalam format ***notebook*** dengen beberapa **kriteria wajib** di bawah ini:
-
-1. *Library* yang digunakan adalah **Numpy** dan **Pandas**.
-2. *Project* dinyatakan selesai dan diterima untuk dinilai jika saat dilakukan `Run All` pada *notebook*, semua *cell* berhasil tereksekusi sampai akhir.
-3. Isi *notebook* harus mengikuti *outline* di bawah ini:
-   1. Perkenalan\
-   Bab pengenalan harus diisi dengan identitas, gambaran besar dataset yang digunakan, dan *objective* yang ingin dicapai.
-   2. *Import* pustaka yang dibutuhkan\
-   *Cell* pertama pada *notebook* **harus berisi dan hanya berisi** semua *library* yang digunakan dalam *project*.
-   3. *Data Loading*\
-   Bagian ini berisi proses *data loading* yang kemudian dilanjutkan dengan *explorasi data* secara sederhana.
-   4. *Data Cleaning*\
-   Bagian ini berisi proses penyiapan data berupa data cleaning sebelum dilakukan *explorasi data* lebih lanjut. Proses cleaning dapat berupa memberi nama baru untuk setiap kolom, mengisi missing values, menghapus kolom yang tidak dipakai, dan lain sebagainya.
-   5. *Explorasi Data*\
-   Bagian ini berisi explorasi data pada dataset diatas dengan menggunakan query, grouping, visualisasi sederhana, dan lain sebagainya.
-   6. Pengambilan Kesimpulan\
-   Pada bab terakhir ini, **harus berisi** kesimpulan yang mencerminkan hasil yang didapat dengan dibandingkan dengan *objective* yang sudah ditulis di bagian pengenalan.
-4. *Notebook* harus diupload dalam akun GitHub masing-masing siswa untuk selanjutnya dinilai.
-
-## Assignment Submission
-
-- Simpan assignment pada sesi ini dengan nama `h8dsft_P0W1`.
-- Push Assigment yang telah kalian buat ke akun Github kalian masing-masing.
-
-## Assignment Objectives
-
-*Graded Challenge 1* ini dibuat guna mengevaluasi konsep Basic Python, Numpy, serta Data Preparation with Pandas sebagai berikut:
+##  Objectives
 
 - Mampu memuat data dengan Pandas
 - Mampu menangani missing values pada dataset
